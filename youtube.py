@@ -10,13 +10,13 @@ driver = webdriver.Edge(PATH)
 
 def downloader(choice, link):
     if choice == '1':
-        driver.get("https://en.savefrom.net/18/")
+        driver.get("https://yt1s.com/youtube-to-mp4")
         time.sleep(2)
-        search = driver.find_element_by_name('sf_url')
+        search = driver.find_element_by_name('q')
         search.send_keys(link)
         search.send_keys(Keys.RETURN)
         time.sleep(3)
-        download = driver.find_element_by_xpath('//*[@id="sf_result"]/div/div/div[2]/div[2]/div[1]/a')
+        download = driver.find_element_by_xpath('//*[@id="asuccess"]')
         download.send_keys(Keys.RETURN)
         time.sleep(10)
 
